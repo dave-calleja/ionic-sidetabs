@@ -75,8 +75,8 @@ angular.module('ionic-sidetabs', [])
               };
 
               this.onTap = function(e) {
-                  e.gesture.srcEvent.preventDefault();
-                  e.gesture.preventDefault();
+                  e.gesture && e.gesture.srcEvent.preventDefault();
+                  e.gesture && e.gesture.preventDefault();
 
                   if (!isExpanded) {
                       lastPosX = handleWidth;
